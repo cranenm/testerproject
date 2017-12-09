@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+ html {
+  
+  -webkit-transition: all 5s ease;
+  -moz-transition: all 5s ease;
+  -o-transition: all 5s ease;
+  transition: all 5s ease;
+
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    -o-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    -o-animation-duration:2s;
+    animation-duration:2s;
+}
+
+body {
+    font-family: "Yanone Kaffeesatz", sans-serif, lighter;
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 a:hover {
+ 	color: red;
+}
+
+p {
+  text-align: center;
+  text-transform: vertical;
+}
+
+
+#mySidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(86, 85, 85, 0.93);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 149px;
+    font-family: "Yanone Kaffeesatz", sans-serif, lighter;
+}
+
+.sidenav a {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 2px 8px 2px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.sidenav .closebtn {
+    clear: left;
+    position: absolute;
+    top: 53px;
+    right: 19px;
+    font-size: 45px;
+    margin-left: 55px;
+}
+
+.logo {
+	cursor: pointer;
+	margin-top: -100px;
+	margin-left: 16px;
+    width: 50px;
+    height: 50px;
+    background-color: red;  
+    border-radius: 50%;
+    float: left;
+}
+
+.logo p {
+	margin-top: 10px;
+	padding-top: 0px;
+	font-size: 20px;
+	color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo p a {
+	margin-top: 40px;
+	color: black;
+	text-decoration: none;
+}
+
+.logo p a:hover {
+	color: red;
+}
+
+span {
+    float: right;
+	margin-right: 20px;
+    margin-top: -98px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+div.topcontainer {
+    width: 100%;
+    background-color: lightblue;
+    height: 600px;
+}
+
+.div1 {
+    width: 100%;
+    height: 600px;
+    background-image: url("images/hakoneroof.jpg");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    border: none;
+    color: black;
+}
+
+.div1 p {
+	color: white;
+	text-align: right;
+	padding-top: 570px;
+	padding-right: 15px;
+	opacity: .5;
+}
+
+.div2 {
+	position: absolute;
+	right: 0;
+    top: 475px;
+    width: 400px;
+    height: 294px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.div3 {
+    position: absolute;
+    margin-top: 10px;
+    top: 350px;
+    right: 100px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.div3 p {
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.darkshadow {
+  background-image: url("images/Hayakawaeriver.JPG");
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.6;
+  opacity: .60;
+  filter: alpha(opacity=60);
+}
+
+.whitepop {
+  background-color:rgba(0, 0, 0, 0.51);
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 35px;
+  z-index: 1002;
+  overflow: auto;
+  padding-top: 100px;
+}
+
+div.whitepop p {
+	margin-top: 100px;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
+div.whitepop a {
+	text-decoration: none;
+}
+
+div.whitepop a:hover {
+	color: red;
+}
+
+.div3 p a {
+	color: white;
+	text-decoration: none
+}
+
+.div3 p a:hover {
+	color: black
+}
+
+.div4 {
+	position: absolute;
+	top: 600px;
+    right: 400px;
+    width: 200px;
+    height: 2564px;
+    background-color: white;
+    border: 1px black;
+    border-style: solid;
+}
+
+.div4 p {
+	z-index: -1;
+	padding-top: 60px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 30px;
+}
+
+.div5 {
+	position: absolute;
+	top: 400px;
+    right: 400px;
+    width: 200px;
+    height: 300px;
+}
+
+.div5 p {
+	padding-top: 200px;
+}
+
+.div6 {
+	position: absolute;
+	top: 830px;
+    right: 307px;
+    width: 200px;
+    height: 800px;
+}
+
+div.firstbreak {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+div.museum {
+    width: 90%;
+    background-color: white;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+
+div.museum1 {
+	width: 100%;
+    height: 100%;
+    width: 50%;
+    background-image: url("images/statuehakone.jpg");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    float: left;
+}
+
+div.museum p {
+	margin-top: 470px;
+	color: white;
+	text-align: right;
+	padding-right: 15px;
+	opacity: .9;
+}
+
+div.museum3 {
+	float: right;
+	height: 40%;
+	width: 49%;
+	background-color: rgba(191, 191, 191, 1);
+	box-shadow: 2px 2px 1px #888888;
+	color: white;
+}
+
+div.museum3 p {
+	text-align: center;
+	padding-top: 40px;
+	margin: 0 auto;
+	font-size: 85px;
+}
+
+div.museum4 {
+	background-color: rgba(69,  69,  69, 0.05);
+	margin-top: 15px;
+	margin-left: 12px;
+    float: left;
+	height: 57.2%;
+	width: 24%;
+}
+
+div.museum4 p {
+	text-align: center;
+	margin-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+div.museum5 {
+	margin-top: 12px;
+	float: right;
+	width: 24%;
+    height: 57%;
+    background-image: url("images/hakonemuseum.jpg");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+div.museum5 p {
+	margin-top: 258px;
+	color: white;
+	text-align: left;
+	padding-left: 15px;
+	opacity: .9;
+}
+
+div.breakone {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+div.hakone {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: white;
+    height: 500px;
+}
+
+div.hakone1 {
+	height: 100px;
+	width: 100%;
+	right: 5%;
+	left: 5%;
+	background-color: rgba(189, 189, 189, 1);
+	box-shadow: 2px 2px 1px #888888;
+}
+
+div.hakone1 p {
+	color: white;
+    font-size: 70px;
+}
+
+div.hakone2 {
+	margin-top: 15px;
+    background-image: url("images/lakeashinoko2.jpg");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    border-right: 7.5px solid white;
+    height: 75%;
+    width: 45%;
+    float: left;
+}
+
+div.hakone2 p {
+	color: white;
+	text-align: right;
+	margin-top: 348px;
+	padding-right: 15px;
+	opacity: .7;
+}
+
+div.hakone3 {
+    background-image: url("images/lakeashinoko.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 55%;
+    height: 500px;
+    border-left: 7.5px solid white;
+    border-opacity: 0.5%;
+    float: left;
+}
+
+div.hakone3 p {
+	color: white;
+	text-align: left;
+	margin-top: 475px;
+	padding-left: 20px;
+	opacity: .9;
+}
+
+div.hakone4 {
+	background-color: rgba(69,   69,   69, 0.03);
+	margin-top: -110px;
+    float: left;
+    width: 44.5%;
+    height: 22%;
+}
+
+div.hakone4 p {
+	margin-top: 29px;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 20px;
+}
+
+div.breaktwo {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+div.traincontainer {
+    width: 90%;
+    background-color: white;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+
+div.train {
+	width: 100%;
+    height: 100%;
+    width: 50%;
+    background-image: url("images/hakonetrain.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    float: right;
+}
+
+div.train p {
+	margin-top: 470px;
+	color: white;
+	text-align: left;
+	padding-left: 15px;
+	opacity: .9;
+}
+
+div.train2 {
+	float: left;
+	height: 40%;
+	width: 49%;
+	background-color: rgba(191, 191, 191, 1);
+	box-shadow: 2px 2px 1px #888888;	
+}
+
+div.train2 p {
+    color: white;
+    padding-right: 30%;
+    padding-left: 30%;
+    margin-top: 40px;
+	font-size: 75px;
+}
+
+div.train1 {
+   	margin-top: 15px;
+	float: left;
+	width: 24%;
+    height: 57%;
+    background-image: url("images/blackeggs.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+div.train1 p {
+	color: white;
+	text-align: right;
+	margin-top: 254px;
+	padding-right: 15px;
+	opacity: .9;
+}
+
+.train3 {
+  	background-color: rgba(69,  69,  69, 0.05);
+	margin-top: 15px;
+	margin-left: 12px;
+    float: left;
+	height: 57.2%;
+	width: 24%;
+}
+
+.train3 p {
+	text-align: center;
+	margin-top: 55px;
+	padding-bottom: 2em;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.discover {
+	margin-top: 60px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+    font-size: 20px;
+    color: black;
+}
+
+div.breakthree {
+    width: 100%;
+    background-color: white;
+    height: 100px;
+}
+
+footer {
+    content:"";
+    clear: both;
+}
+
+footer {
+    height: 180px;
+    padding: 1em 0; 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.49);
+    clear: left;
+    font-family: "Yanone Kaffeesatz", sans-serif, lighter;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+footer nav {
+	float: left;
+	padding-left: 50px;
+	padding-top: 5px;
+}
+
+footer nav ul li {
+    color: white;
+    line-height: 1.5em;
+    padding-bottom: .9;
+    text-align: left;
+    font-family: "Yanone Kaffeesatz", sans-serif, lighter;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+footer nav ul li a {
+    font-family: "Yanone Kaffeesatz", sans-serif, lighter;
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: rgba(255, 0, 0, 0.6);
+}
+
+footer div p {
+	margin-top: 5px;
+	color: darkgray;
+	font-size: 10px;
+}

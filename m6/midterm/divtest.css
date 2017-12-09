@@ -1,0 +1,730 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+ html {
+  
+  -webkit-transition: all 5s ease;
+  -moz-transition: all 5s ease;
+  -o-transition: all 5s ease;
+  transition: all 5s ease;
+
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    -o-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    -o-animation-duration:2s;
+    animation-duration:2s;
+}
+
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif, lighter;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 a:hover {
+ 	color: red;
+}
+
+p {
+  text-align: center;
+  text-transform: vertical;
+}
+
+
+#mySidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(86, 85, 85, 0.93);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 149px;
+   font-family: 'Yanone Kaffeesatz', sans-serif, lighter;
+}
+
+.sidenav a {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 2px 8px 2px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.sidenav .closebtn {
+    clear: left;
+    position: absolute;
+    top: 53px;
+    right: 19px;
+    font-size: 45px;
+    margin-left: 55px;
+}
+
+.logo {
+	cursor: pointer;
+	margin-top: -100px;
+	margin-left: 16px;
+    width: 50px;
+    height: 50px;
+    background-color: red;  
+    border-radius: 50%;
+    float: left;
+}
+
+.logo p {
+	margin-top: 10px;
+	padding-top: 0px;
+	font-size: 20px;
+	color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo p a {
+	margin-top: 40px;
+	color: black;
+	text-decoration: none;
+}
+
+.logo p a:hover {
+	color: red;
+}
+
+span {
+    float: right;
+	margin-right: 20px;
+    margin-top: -98px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+div.topcontainer {
+    width: 100%;
+    background-color: lightblue;
+    height: 600px;
+}
+
+.div1 {
+    width: 100%;
+    height: 600px;
+    background-image: url("images/kyototemple.jpg");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    border: none;
+    color: black;
+}
+
+.div1 p {
+	color: white;
+	text-align: right;
+	padding-top: 570px;
+	padding-right: 15px;
+	opacity: .5;
+}
+
+.div2 {
+    position: absolute;
+    top: 169px;
+    right: 300px;
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    opacity: 100%;
+}
+
+.div3 {
+    position: absolute;
+    top: 350px;
+    right: 400px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.div3 p {
+    padding-top: 80px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.div3 p a {
+    padding-top: 80px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.darkshadow {
+  background-image: url("images/tokyoblossom.JPG");
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.6;
+  opacity: .60;
+  filter: alpha(opacity=60);
+}
+
+.whitepop {
+  background-color:rgba(0, 0, 0, 0.45);
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 35px;
+  z-index: 1002;
+  overflow: auto;
+  padding-top: 50px;
+}
+
+div.whitepop p {
+	margin-top: 80px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+div.whitepop a {
+	text-decoration: none;
+}
+
+div.whitepop a:hover {
+	color: red;
+}
+
+.div3 p a {
+	color: white;
+	text-decoration: none
+}
+
+.div3 p a:hover {
+	color: black
+}
+
+.div4 {
+	position: absolute;
+	top: 600px;
+    right: 402px;
+    width: 200px;
+    height: 167px;
+    text-decoration: none;
+    color: black;
+}
+
+.div4 p {
+	z-index: -1;
+	padding-top: 44px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.div5 {
+	position: absolute;
+	top: 500px;
+    right: 402px;
+    width: 200px;
+    height: 200px;
+    color: black;
+}
+
+.div5 p {
+	padding-top: 200px;
+}
+
+.div6 {
+	position: absolute;
+	top: 733px;
+    right: 308px;
+    width: 200px;
+    height: 200px;
+    color: black;
+}
+
+div.firstbreak {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+div.kyotowords {
+	z-index: 100;
+	position: absolute;
+	right: 0;
+	margin-top: 50px;
+	margin-right: 610px;
+}
+
+div.kyotowords p {
+	color: white;
+    text-shadow: 2px 2px #FF0000;
+    font-size: 300px;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: red;
+}
+
+div.kyoto {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    height: 600px;
+}
+
+div.kyoto2 {
+    background-image: url("images/ujiwisteria.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 39%;
+    height: 600px;
+    float: left;
+    margin-right: 7.5px;
+}
+
+div.kyoto2 p {
+	color: white;
+	text-align: right;
+	padding-top: 665px;
+	padding-right: 15px;
+	opacity: .7;
+}
+
+div.kyoto3 {
+    background-image: url("images/toriprayerskyoto.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 59%;
+    height: 100%;
+    float: left;
+    margin-left: 17px;
+}
+
+div.kyoto3 p {
+	color: white;
+	text-align: left;
+	padding-top: 575px;
+	padding-left: 20px;
+	opacity: .9;
+}
+
+div.kyoto5 {
+    position: absolute;
+    right: 400px;
+    width: 200px;
+    height: 600px;
+    background-color: white;
+
+}
+
+.discover3 {
+	margin-top: 185px;
+	margin-bottom: 15px;
+    font-size: 40px;
+    color: black;
+}
+
+.readmore3 {
+	margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    background-color: white;  
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 50%;
+}
+
+.readmore3 p {
+	margin-top: 15px;
+	margin: 20px;
+	padding-top: 0px;
+	font-size: 15px;
+	color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.readmore3 p a {
+	margin-top: 40px;
+	color: black;
+	text-decoration: none;
+}
+
+.readmore3 p a:hover {
+	color: red;
+}
+
+div.breakone {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+div.hakone {
+    width: 90%;
+    background-color: rgba(28, 28, 28, 0.58);
+    height: 600px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+div.hakone1 {
+    background-image: url("images/hakonetrain3.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 60%;
+    height: 600px;
+    border-right: 15px solid white;
+    float: left;
+}
+
+div.hakone1 p {
+	color: white;
+	text-align: right;
+	padding-right: 15px;
+	padding-top: 575px;
+	opacity: .9;
+}
+
+div.hakone2 {
+    background-image: url("images/stainglasstower.JPG");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 40%;
+    height: 600px;
+    border-opacity: 0.5%;
+    float: left;
+}
+
+div.hakone2 p {
+	color: white;
+	text-align: left;
+	padding-top: 670px;
+	padding-left: 12px;
+	opacity: .9;
+}
+
+div.hakone3 {
+	position: absolute;
+	margin-left: 38%;
+}
+
+div.hakone3 p {
+	margin-top: 45px;
+    color: white;
+    text-shadow: 2px 2px #FF0000;
+    font-size: 350px;
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: red;
+}
+
+div.hakone4 {
+    position: absolute;
+    left: 20%;
+    width: 200px;
+    height: 600px;
+    background-color: white;
+}
+
+.discover2 {
+	margin-top: 200px;
+	margin-bottom: 15px;
+    font-size: 40px;
+    padding-left: .2em;
+    padding-right: .2em;
+    color: black;
+}
+
+.readmore2 {
+	margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 50%;
+}
+
+.readmore2 p {
+	margin-top: 15px;
+	margin: 20px;
+	padding-top: 0px;
+	font-size: 15px;
+	color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.readmore2 p a {
+	margin-top: 40px;
+	color: black;
+	text-decoration: none;
+}
+
+.readmore2 p a:hover {
+	color: red;
+}
+
+
+div.breaktwo {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+
+div.container {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: white;
+    height: 600px;
+}
+
+div.box {
+    background-image: url("images/cranes.jpg");
+    background-color: black;
+    background-size: 100%
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    border-right: 30px solid white;
+    float: left;
+}
+
+div.box p {
+	color: white;
+	margin-top: 570px;
+	text-align: right;
+	padding-right: 15px;
+	opacity: .9;
+}
+
+div.tokyowords {
+	z-index: 100;
+	position: absolute;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-left: 30px;
+}
+
+div.tokyowords p {
+	margin-top: -130px;
+    color: white;
+    text-shadow: 2px 2px #FF0000;
+    position: absolute;
+    padding-top: 0px;
+    font-size: 200px;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: red;
+}
+
+div.box1 {
+    background-image: url("images/tokyocoffee.jpg");
+    background-color: black;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 70%;
+    height: 600px;
+    border-left: 10px;
+    float: left;
+}
+
+div.box1 p {
+	color: white;
+	text-align: left;
+	margin-top: 664px;
+	padding-left: 20px;
+	opacity: .9;
+}
+
+.box3 {
+    position: absolute;
+    right: 400px;
+    width: 200px;
+    height: 600px;
+    background-color: white;
+}
+
+.discover {
+	margin-top: 200px;
+	margin-bottom: 15px;
+    font-size: 40px;
+    color: black;
+}
+
+.readmore {
+	margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    background-color: white;  
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 50%;
+}
+
+.readmore p {
+	margin-top: 15px;
+	margin: 20px;
+	padding-top: 0px;
+	font-size: 15px;
+	color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.readmore p a {
+	margin-top: 40px;
+	color: black;
+	text-decoration: none;
+}
+
+.readmore p a:hover {
+	color: red;
+}
+
+div.breakthree {
+    width: 100%;
+    background-color: white;
+    height: 100px;
+}
+
+footer {
+    content:"";
+    clear: both;
+}
+
+footer {
+    height: 180px;
+    padding: 1em 0; 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.49);
+    clear: left;
+   font-family: 'Yanone Kaffeesatz', sans-serif, lighter;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+footer nav {
+	float: left;
+	padding-left: 50px;
+	padding-top: 5px;
+}
+
+footer nav ul li {
+    color: white;
+    line-height: 1.5em;
+    padding-bottom: .9;
+    text-align: left;
+   font-family: 'Yanone Kaffeesatz', sans-serif, lighter;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+footer nav ul li a {
+   font-family: 'Yanone Kaffeesatz', sans-serif, lighter;
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: rgba(255, 0, 0, 0.6);
+}
+
+footer div p {
+	margin-top: 5px;
+	color: darkgray;
+	font-size: 10px;
+}
